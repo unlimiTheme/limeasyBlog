@@ -1,0 +1,920 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body.grand-retro {
+  /*** Title */
+  /*** Text */
+  /* Links
+--------------------------------------------- */
+  /* Page
+--------------------------------------------- */
+  /* Forms
+--------------------------------------------- */
+  /* Typography
+--------------------------------------------- */
+  /* Elements
+--------------------------------------------- */
+}
+
+body.grand-retro {
+  background: #fbfbfb;
+}
+
+body.grand-retro,
+body.grand-retro button,
+body.grand-retro input,
+body.grand-retro select,
+body.grand-retro optgroup,
+body.grand-retro textarea {
+  font-size: 15px;
+  color: #38361f;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+body.grand-retro a {
+  color: #444440;
+}
+
+body.grand-retro a:visited {
+  color: #444440;
+}
+
+body.grand-retro a:hover, body.grand-retro a:focus, body.grand-retro a:active {
+  color: #a21616;
+}
+
+body.grand-retro .site-main {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+body.grand-retro button:not(.customize-partial-edit-shortcut-button),
+body.grand-retro input[type="button"],
+body.grand-retro input[type="reset"],
+body.grand-retro input[type="submit"] {
+  border: none;
+  color: #fbfbfb;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #b14141;
+  padding: 10px 20px;
+}
+
+body.grand-retro button:not(.customize-partial-edit-shortcut-button):hover,
+body.grand-retro input[type="button"]:hover,
+body.grand-retro input[type="reset"]:hover,
+body.grand-retro input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+body.grand-retro button:not(.customize-partial-edit-shortcut-button):active, body.grand-retro button:not(.customize-partial-edit-shortcut-button):focus,
+body.grand-retro input[type="button"]:active,
+body.grand-retro input[type="button"]:focus,
+body.grand-retro input[type="reset"]:active,
+body.grand-retro input[type="reset"]:focus,
+body.grand-retro input[type="submit"]:active,
+body.grand-retro input[type="submit"]:focus {
+  outline: none;
+}
+
+body.grand-retro input[type="text"],
+body.grand-retro input[type="email"],
+body.grand-retro input[type="url"],
+body.grand-retro input[type="password"],
+body.grand-retro input[type="search"],
+body.grand-retro input[type="number"],
+body.grand-retro input[type="tel"],
+body.grand-retro input[type="range"],
+body.grand-retro input[type="date"],
+body.grand-retro input[type="month"],
+body.grand-retro input[type="week"],
+body.grand-retro input[type="time"],
+body.grand-retro input[type="datetime"],
+body.grand-retro input[type="datetime-local"],
+body.grand-retro input[type="color"],
+body.grand-retro textarea {
+  font-size: 12px;
+  color: #676765;
+  line-height: 20px;
+  background-color: #eeeeee;
+  border-radius: 2px;
+  border: none;
+  display: block;
+  padding: 7px 5px;
+}
+
+body.grand-retro input[type="text"]:focus,
+body.grand-retro input[type="email"]:focus,
+body.grand-retro input[type="url"]:focus,
+body.grand-retro input[type="password"]:focus,
+body.grand-retro input[type="search"]:focus,
+body.grand-retro input[type="number"]:focus,
+body.grand-retro input[type="tel"]:focus,
+body.grand-retro input[type="range"]:focus,
+body.grand-retro input[type="date"]:focus,
+body.grand-retro input[type="month"]:focus,
+body.grand-retro input[type="week"]:focus,
+body.grand-retro input[type="time"]:focus,
+body.grand-retro input[type="datetime"]:focus,
+body.grand-retro input[type="datetime-local"]:focus,
+body.grand-retro input[type="color"]:focus,
+body.grand-retro textarea:focus {
+  outline: none;
+  background-color: #f9f6de;
+}
+
+body.grand-retro select {
+  font-size: 12px;
+  color: #676765;
+  line-height: 20px;
+  background-color: #eeeeee;
+  border-radius: 2px;
+  border: none;
+  display: block;
+  padding: 7px 5px;
+}
+
+body.grand-retro select:focus {
+  outline: none;
+  background-color: #f9f6de;
+}
+
+body.grand-retro h1 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h1 {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h2 {
+    font-size: 23px;
+  }
+}
+
+body.grand-retro h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h3 {
+    font-size: 21px;
+  }
+}
+
+body.grand-retro h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h4 {
+    font-size: 19px;
+  }
+}
+
+body.grand-retro h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h5 {
+    font-size: 17px;
+  }
+}
+
+body.grand-retro h6 {
+  font-size: 9px;
+  font-weight: 700;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro h6 {
+    font-size: 15px;
+  }
+}
+
+body.grand-retro ul,
+body.grand-retro ol {
+  margin: 0 0 1.5em 0;
+}
+
+body.grand-retro li > ul,
+body.grand-retro li > ol {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+body.grand-retro header.site-header .header-wrapper {
+  background-color: #fff8be;
+  padding-top: 20px;
+}
+
+body.grand-retro header.site-header .header-wrapper .site-title {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro header.site-header .header-wrapper .site-title {
+    text-align: left;
+  }
+}
+
+body.grand-retro header.site-header .header-wrapper .site-title a {
+  text-decoration: none;
+}
+
+body.grand-retro header.site-header .header-wrapper .site-description {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro header.site-header .header-wrapper .site-description {
+    text-align: left;
+  }
+}
+
+body.grand-retro header.site-header .header-wrapper .header-menu-wrap {
+  margin-bottom: -15px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul ul {
+  background-color: #fff8be;
+  padding: 3px 5px 5px 5px;
+  -webkit-box-shadow: -1px -1px 0px #a2a2a2;
+  box-shadow: -1px -1px 0px #a2a2a2;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li a {
+  color: #444440;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 2px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li:hover:not(.focus) > a {
+  color: #a21616;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul.menu > li > a {
+  padding: 0;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation > div > ul > li > a {
+  font-size: 16px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation a.menu-toggle {
+  margin: -10px auto 10px;
+  width: 45px;
+}
+
+body.grand-retro footer.site-footer {
+  font-size: 12px;
+  background-color: #eeeeee;
+  padding: 20px 0px 10px 0px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+body.grand-retro footer.site-footer a {
+  text-decoration: none;
+  color: #444440;
+}
+
+body.grand-retro footer.site-footer a:hover {
+  color: #b14141;
+}
+
+body.grand-retro footer.site-footer .widget-title {
+  color: #444440;
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  padding: 20px 0 10px;
+}
+
+body.grand-retro footer.site-footer .footer-site-info-wrap {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 11px;
+}
+
+body.grand-retro aside.widget-area {
+  padding-top: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro aside.widget-area {
+    padding-top: 0;
+  }
+}
+
+body.grand-retro aside.widget-area p,
+body.grand-retro aside.widget-area ul,
+body.grand-retro aside.widget-area li,
+body.grand-retro aside.widget-area a,
+body.grand-retro aside.widget-area table {
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+body.grand-retro aside.widget-area a {
+  color: #444440;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+body.grand-retro aside.widget-area a:hover {
+  color: #b14141;
+}
+
+body.grand-retro aside.widget-area .widget-title {
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  padding: 0 0 10px;
+}
+
+body.grand-retro aside.widget-area .widget-title:after {
+  content: '';
+  background: #fff8be;
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  height: 20px;
+  width: 20px;
+  z-index: -1;
+}
+
+body.grand-retro aside.widget-area ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+body.grand-retro aside.widget-area ul li {
+  list-style: none;
+  padding: 0 0 3px 0;
+}
+
+body.grand-retro aside.widget-area ul ul {
+  padding-left: 10px;
+}
+
+body.grand-retro.single article {
+  margin-top: 7px;
+}
+
+body.grand-retro.single article .post-thumbnail {
+  margin-top: 20px;
+}
+
+body.grand-retro.single article .post-thumbnail img {
+  opacity: .85;
+}
+
+body.grand-retro.single article .post-thumbnail img:hover {
+  opacity: 1;
+}
+
+body.grand-retro.single article header.entry-header h1.entry-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #444440;
+  margin: 0 0 5px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.single article header.entry-header h1.entry-title {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro.single article header.entry-header h1.entry-title:after {
+  content: '';
+  background: #fff8be;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -6px;
+  top: -12px;
+  z-index: -1;
+}
+
+body.grand-retro.single article .entry-meta,
+body.grand-retro.single article .entry-footer {
+  letter-spacing: 0.2px;
+  color: #444440;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 19px;
+  padding-right: 3px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.single article .entry-meta,
+  body.grand-retro.single article .entry-footer {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.single article .entry-meta a,
+body.grand-retro.single article .entry-footer a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+body.grand-retro.single article .entry-meta a:hover,
+body.grand-retro.single article .entry-footer a:hover {
+  color: #b14141;
+}
+
+body.grand-retro.single article .entry-footer {
+  margin-bottom: 0;
+}
+
+body.grand-retro.single article .entry-footer > span {
+  padding-right: 2px;
+}
+
+body.grand-retro.single article .entry-footer > span.edit-link {
+  display: block;
+}
+
+body.grand-retro.single article .entry-footer > span.edit-link a {
+  text-decoration: underline;
+}
+
+body.grand-retro.single article .entry-footer > span + body.grand-retro.single article .entry-footer > span.comments-link {
+  padding-left: 20px;
+}
+
+body.grand-retro.single article .posted-on-wrap .row.inside > div:nth-child(2) {
+  padding: 0;
+}
+
+body.grand-retro.single article .entry-content {
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.single article .entry-content {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.single article .post-navigation {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+body.grand-retro.single article .post-navigation .nav-subtitle {
+  display: none;
+}
+
+body.grand-retro.single article .post-navigation .nav-previous a:after,
+body.grand-retro.single article .post-navigation .nav-next a:after {
+  content: "";
+  border: solid #444440;
+  border-width: 0 2px 2px 0;
+}
+
+body.grand-retro.single article .post-navigation .nav-previous a,
+body.grand-retro.single article .post-navigation .nav-next a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+body.grand-retro.single article .post-navigation .nav-previous a:hover,
+body.grand-retro.single article .post-navigation .nav-next a:hover {
+  color: #b14141;
+}
+
+body.grand-retro.blog, body.grand-retro.search, body.grand-retro.archive {
+  /* Archive base */
+}
+
+body.grand-retro.blog .page-header, body.grand-retro.search .page-header, body.grand-retro.archive .page-header {
+  margin-bottom: 50px;
+}
+
+body.grand-retro.blog .page-header h1.page-title, body.grand-retro.search .page-header h1.page-title, body.grand-retro.archive .page-header h1.page-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #676765;
+  margin: 0 0 5px;
+  margin: 0 0 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.blog .page-header h1.page-title, body.grand-retro.search .page-header h1.page-title, body.grand-retro.archive .page-header h1.page-title {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro.blog .page-header .archive-description, body.grand-retro.search .page-header .archive-description, body.grand-retro.archive .page-header .archive-description {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+body.grand-retro.blog article, body.grand-retro.search article, body.grand-retro.archive article {
+  margin: 0 0 50px;
+}
+
+body.grand-retro.blog article .post-thumbnail, body.grand-retro.search article .post-thumbnail, body.grand-retro.archive article .post-thumbnail {
+  margin-top: 20px;
+}
+
+body.grand-retro.blog article .post-thumbnail img, body.grand-retro.search article .post-thumbnail img, body.grand-retro.archive article .post-thumbnail img {
+  opacity: .85;
+}
+
+body.grand-retro.blog article .post-thumbnail img:hover, body.grand-retro.search article .post-thumbnail img:hover, body.grand-retro.archive article .post-thumbnail img:hover {
+  opacity: 1;
+}
+
+body.grand-retro.blog article header.entry-header h2.entry-title, body.grand-retro.search article header.entry-header h2.entry-title, body.grand-retro.archive article header.entry-header h2.entry-title {
+  margin-bottom: 0;
+}
+
+body.grand-retro.blog article header.entry-header h2.entry-title a, body.grand-retro.search article header.entry-header h2.entry-title a, body.grand-retro.archive article header.entry-header h2.entry-title a {
+  color: #444440;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.blog article header.entry-header h2.entry-title a, body.grand-retro.search article header.entry-header h2.entry-title a, body.grand-retro.archive article header.entry-header h2.entry-title a {
+    font-size: 21px;
+  }
+}
+
+body.grand-retro.blog article header.entry-header h2.entry-title a:hover, body.grand-retro.search article header.entry-header h2.entry-title a:hover, body.grand-retro.archive article header.entry-header h2.entry-title a:hover {
+  color: #b14141;
+}
+
+body.grand-retro.blog article header.entry-header h2.entry-title a:after, body.grand-retro.search article header.entry-header h2.entry-title a:after, body.grand-retro.archive article header.entry-header h2.entry-title a:after {
+  content: '';
+  background: #fff8be;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -6px;
+  top: -12px;
+  z-index: -1;
+}
+
+body.grand-retro.blog article .posted-on,
+body.grand-retro.blog article .entry-meta, body.grand-retro.search article .posted-on,
+body.grand-retro.search article .entry-meta, body.grand-retro.archive article .posted-on,
+body.grand-retro.archive article .entry-meta {
+  letter-spacing: 0.2px;
+  color: #444440;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 19px;
+  padding-right: 3px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.blog article .posted-on,
+  body.grand-retro.blog article .entry-meta, body.grand-retro.search article .posted-on,
+  body.grand-retro.search article .entry-meta, body.grand-retro.archive article .posted-on,
+  body.grand-retro.archive article .entry-meta {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.blog article .posted-on a,
+body.grand-retro.blog article .entry-meta a, body.grand-retro.search article .posted-on a,
+body.grand-retro.search article .entry-meta a, body.grand-retro.archive article .posted-on a,
+body.grand-retro.archive article .entry-meta a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+body.grand-retro.blog article .posted-on a:hover,
+body.grand-retro.blog article .entry-meta a:hover, body.grand-retro.search article .posted-on a:hover,
+body.grand-retro.search article .entry-meta a:hover, body.grand-retro.archive article .posted-on a:hover,
+body.grand-retro.archive article .entry-meta a:hover {
+  color: #b14141;
+}
+
+body.grand-retro.blog article .entry-footer, body.grand-retro.search article .entry-footer, body.grand-retro.archive article .entry-footer {
+  letter-spacing: 0.2px;
+  color: #444440;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 19px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.blog article .entry-footer, body.grand-retro.search article .entry-footer, body.grand-retro.archive article .entry-footer {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.blog article .entry-footer > span, body.grand-retro.search article .entry-footer > span, body.grand-retro.archive article .entry-footer > span {
+  padding-right: 2px;
+}
+
+body.grand-retro.blog article .entry-footer > span.edit-link, body.grand-retro.search article .entry-footer > span.edit-link, body.grand-retro.archive article .entry-footer > span.edit-link {
+  display: block;
+}
+
+body.grand-retro.blog article .entry-footer > span.edit-link a, body.grand-retro.search article .entry-footer > span.edit-link a, body.grand-retro.archive article .entry-footer > span.edit-link a {
+  text-decoration: underline;
+}
+
+body.grand-retro.blog article .entry-footer > span + body.grand-retro.blog article .entry-footer > span.comments-link, body.grand-retro.search article .entry-footer > span + body.grand-retro.blog article .entry-footer > span.comments-link, body.grand-retro.archive article .entry-footer > span + body.grand-retro.blog article .entry-footer > span.comments-link, body.grand-retro.blog article .entry-footer > span + body.grand-retro.search article .entry-footer > span.comments-link, body.grand-retro.search article .entry-footer > span + body.grand-retro.search article .entry-footer > span.comments-link, body.grand-retro.archive article .entry-footer > span + body.grand-retro.search article .entry-footer > span.comments-link, body.grand-retro.blog article .entry-footer > span + body.grand-retro.archive article .entry-footer > span.comments-link, body.grand-retro.search article .entry-footer > span + body.grand-retro.archive article .entry-footer > span.comments-link, body.grand-retro.archive article .entry-footer > span + body.grand-retro.archive article .entry-footer > span.comments-link {
+  padding-left: 20px;
+}
+
+body.grand-retro.blog article .posted-on-wrap .row.inside > div:nth-child(2), body.grand-retro.search article .posted-on-wrap .row.inside > div:nth-child(2), body.grand-retro.archive article .posted-on-wrap .row.inside > div:nth-child(2) {
+  padding: 0;
+}
+
+body.grand-retro.blog article .entry-content, body.grand-retro.search article .entry-content, body.grand-retro.archive article .entry-content {
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.blog article .entry-content, body.grand-retro.search article .entry-content, body.grand-retro.archive article .entry-content {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro .comments-area {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro .comments-area {
+    margin-top: 0;
+  }
+}
+
+body.grand-retro .comments-area .comments-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #676765;
+  margin: 0 0 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro .comments-area .comments-title {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro .comments-area .comments-title span {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-meta .comment-metadata {
+  top: -3px;
+  left: 45px;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-meta .comment-metadata a {
+  font-size: 11px;
+  text-decoration: none;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-meta .comment-author {
+  font-size: 13px;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-meta .comment-author a {
+  text-decoration: none;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-meta .comment-author img {
+  margin-right: 10px;
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content p,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ul,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ol,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content li,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content span,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content table,
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content pre {
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content p,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ul,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ol,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content li,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content span,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content table,
+  body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content pre {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro .comments-area ol.comment-list li.comment .comment-body .reply {
+  font-size: 12px;
+}
+
+body.grand-retro .comments-area .comment-respond .comment-reply-title {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+body.grand-retro .comments-area .comment-respond .comment-notes {
+  font-size: 13px;
+  color: #9e9e9e;
+}
+
+body.grand-retro .comments-area .comment-respond label {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+body.grand-retro.error404 .site-main {
+  text-align: center;
+}
+
+body.grand-retro.error404 h1.page-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #444440;
+  margin: 0 0 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.error404 h1.page-title {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro.error404 .page-content {
+  font-size: 13px;
+  color: #9e9e9e;
+}
+
+body.grand-retro.search h1.page-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #444440;
+  margin: 0 0 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.search h1.page-title {
+    font-size: 25px;
+  }
+}
+
+body.grand-retro.search h1.page-title span {
+  font-style: italic;
+}
+
+body.grand-retro.search article .entry-header h2.entry-title a {
+  color: #444440;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.search article .entry-header h2.entry-title a {
+    font-size: 21px;
+  }
+}
+
+body.grand-retro.search article .entry-content {
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.search article .entry-content {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.search article .posted-on,
+body.grand-retro.search article .entry-meta {
+  letter-spacing: 0.2px;
+  color: #444440;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 19px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.search article .posted-on,
+  body.grand-retro.search article .entry-meta {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.search article .entry-footer {
+  letter-spacing: 0.2px;
+  color: #444440;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 19px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.search article .entry-footer {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+body.grand-retro.page h1.entry-title {
+  display: inline-block;
+  color: #444440;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0;
+  font-size: 21px;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.page h1.entry-title {
+    font-size: 30px;
+  }
+}
+
+body.grand-retro.page .entry-content {
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #444440;
+}
+
+@media only screen and (min-width: 600px) {
+  body.grand-retro.page .entry-content {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
