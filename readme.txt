@@ -30,6 +30,10 @@ Based on https://underscores.me/, (C) 2012-2022 Automattic, Inc., [GPLv2 or late
 Bootstrap
 The MIT License (MIT), Copyright (c) 2011-2022 Twitter, Inc., Copyright (c) 2011-2022 The Bootstrap Authors
 
+Montserrat Google Font
+These fonts are licensed under the Open Font License, (https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL, 
+Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+
 Screenshot resources:
 
 * https://pxhere.com/en/photo/710499 (Creative Commons Zero (CC0) license, https://pxhere.com/en/license)
