@@ -70,7 +70,7 @@
 															<span class="sep"> | </span>
 															<?php
 																/* translators: 1: Theme name, 2: Theme author. */
-																printf( esc_html__( 'Theme: %1$s by %2$s.', 'limeasyblog' ), 'limeasyblog', '<a href="https://github.com/syntheticThemes/limeasyblog">limeasyblog</a>' );
+																printf( esc_html__( 'Theme: %1$s by %2$s.', 'limeasyblog' ), 'limeasyblog', '<a href="https://github.com/unlimiTheme/limeasyblog">LimeasyBlog</a>' );
 															?>
 														</div><!-- .site-info -->
 													</div>
