@@ -261,7 +261,6 @@ body.grand-retro header.site-header .header-wrapper .header-menu-wrap {
 
 body.grand-retro header.site-header .header-wrapper .main-navigation ul ul {
   background-color: #fff8be;
-  padding: 3px 5px 5px 5px;
   -webkit-box-shadow: -1px -1px 0px #a2a2a2;
   box-shadow: -1px -1px 0px #a2a2a2;
 }
@@ -285,9 +284,15 @@ body.grand-retro header.site-header .header-wrapper .main-navigation > div > ul 
   font-size: 16px;
 }
 
-body.grand-retro header.site-header .header-wrapper .main-navigation a.menu-toggle {
+body.grand-retro header.site-header .header-wrapper .main-navigation button.menu-toggle {
+  background: none;
+  padding: 0;
   margin: -10px auto 10px;
   width: 45px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation button.menu-toggle:focus {
+  outline: 1px solid #a21616;
 }
 
 body.grand-retro footer.site-footer {

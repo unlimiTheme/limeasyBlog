@@ -512,12 +512,12 @@ a:hover, a:focus, a:active {
   color: #191970;
 }
 
-a:focus {
-  outline: thin dotted;
-}
-
 a:hover, a:active {
   outline: 0;
+}
+
+a:focus, a:focus:hover {
+  outline: 1px solid #191970;
 }
 
 /* Forms
@@ -549,7 +549,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
+  outline: 1px solid #191970;
 }
 
 input[type="text"],
@@ -590,11 +590,15 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+  outline: 1px solid #191970;
 }
 
 select {
   border: 1px solid #ccc;
+}
+
+select:focus {
+  outline: 1px solid #191970;
 }
 
 textarea {
@@ -661,13 +665,15 @@ textarea {
 }
 
 /* Small menu. */
-a.menu-toggle,
+button.menu-toggle,
 .main-navigation.toggled ul {
   display: block;
+  background: none;
+  border: none;
 }
 
 @media screen and (min-width: 37.5em) {
-  a.menu-toggle {
+  button.menu-toggle {
     display: none;
   }
   .main-navigation ul {
@@ -865,11 +871,12 @@ a.menu-toggle,
   top: 5px;
   width: auto;
   z-index: 100000;
+  outline: 1px solid #191970;
 }
 
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
-  outline: 0;
+  outline: 1px solid #191970;
 }
 
 /* Alignments
@@ -1035,7 +1042,6 @@ a.menu-toggle,
 }
 
 .header-wrapper .main-navigation {
-  /* dropdown icon */
   /* classic animation */
   /* classic down animation */
   /* Dottes animation */
@@ -1045,6 +1051,10 @@ a.menu-toggle,
   /* plus animation */
   /* rignt arrow animation */
   /* Hidden menu */
+}
+
+.header-wrapper .main-navigation ul a:focus {
+  outline: 0;
 }
 
 .header-wrapper .main-navigation ul ul {
@@ -1066,27 +1076,40 @@ a.menu-toggle,
   display: inline-block;
 }
 
-.header-wrapper .main-navigation ul li:hover:not(.focus) > ul {
+.header-wrapper .main-navigation ul li:hover > ul {
   left: -999em;
 }
 
-.header-wrapper .main-navigation ul li:hover:not(.focus) > a {
+.header-wrapper .main-navigation ul li:hover > a {
   color: gray;
 }
 
-.header-wrapper .main-navigation ul li.focus > ul {
+.header-wrapper .main-navigation ul li.focus > div,
+.header-wrapper .main-navigation ul li > .focus:hover > div {
+  outline: 1px solid #191970;
+  width: 100%;
+}
+
+.header-wrapper .main-navigation ul li.focus > ul,
+.header-wrapper .main-navigation ul li > .focus:hover > ul {
   left: auto;
   display: block;
   position: relative;
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin-top: 1px;
+}
+
+.header-wrapper .main-navigation ul li.focus > a,
+.header-wrapper .main-navigation ul li > .focus:hover > a {
+  outline: 0;
 }
 
 .header-wrapper .main-navigation ul li.menu-item-has-children, .header-wrapper .main-navigation ul li.page_item_has_children {
   margin-right: 0;
 }
 
-.header-wrapper .main-navigation ul li.menu-item-has-children > span.dropdown-menu-icon, .header-wrapper .main-navigation ul li.page_item_has_children > span.dropdown-menu-icon {
+.header-wrapper .main-navigation ul li.menu-item-has-children > div > span.dropdown-menu-icon, .header-wrapper .main-navigation ul li.page_item_has_children > div > span.dropdown-menu-icon {
   position: relative;
   display: inline-block;
   width: 30px;
@@ -1095,7 +1118,7 @@ a.menu-toggle,
   cursor: pointer;
 }
 
-.header-wrapper .main-navigation ul li.menu-item-has-children > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li.page_item_has_children > span.dropdown-menu-icon:after {
+.header-wrapper .main-navigation ul li.menu-item-has-children > div > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li.page_item_has_children > div > span.dropdown-menu-icon:after {
   content: "";
   position: absolute;
   top: 12px;
@@ -1109,10 +1132,11 @@ a.menu-toggle,
           transform: rotate(45deg);
 }
 
-.header-wrapper .main-navigation ul li.menu-item-has-children.focus > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li.page_item_has_children.focus > span.dropdown-menu-icon:after {
+.header-wrapper .main-navigation ul li.menu-item-has-children.focus > div > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li.page_item_has_children.focus > div > span.dropdown-menu-icon:after {
   content: "";
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
+  margin-top: 2px;
 }
 
 .header-wrapper .main-navigation ul.nav-menu > li > a {
@@ -1120,8 +1144,11 @@ a.menu-toggle,
 }
 
 @media screen and (min-width: 37.5em) {
-  .header-wrapper .main-navigation > div > ul > li:hover > ul, .header-wrapper .main-navigation > div > ul > li:hover:not(.focus) > ul, .header-wrapper .main-navigation > div > ul > li.focus:hover > ul {
+  .header-wrapper .main-navigation > div > ul > li:hover > ul, .header-wrapper .main-navigation > div > ul > li.focus > ul, .header-wrapper .main-navigation > div > ul > li.focus:hover > ul {
     left: 0;
+  }
+  .header-wrapper .main-navigation > div > ul > li.menu-item-has-children.focus > div {
+    width: calc(100% + 30px);
   }
   .header-wrapper .main-navigation ul {
     display: inline;
@@ -1133,30 +1160,42 @@ a.menu-toggle,
   .header-wrapper .main-navigation ul li.menu-item-has-children, .header-wrapper .main-navigation ul li.page_item_has_children {
     padding-right: 30px;
   }
-  .header-wrapper .main-navigation ul li.menu-item-has-children > span.dropdown-menu-icon, .header-wrapper .main-navigation ul li.page_item_has_children > span.dropdown-menu-icon {
+  .header-wrapper .main-navigation ul li.menu-item-has-children > div > span.dropdown-menu-icon, .header-wrapper .main-navigation ul li.page_item_has_children > div > span.dropdown-menu-icon {
     position: absolute;
     display: inline-block;
     width: 30px;
     height: 30px;
-    top: 0;
+    top: -4px;
     right: 0;
   }
-  .header-wrapper .main-navigation ul li.focus > ul {
+  .header-wrapper .main-navigation ul li.focus ul {
     position: absolute;
     left: -999em;
   }
-  .header-wrapper .main-navigation ul li:hover > ul, .header-wrapper .main-navigation ul li:hover:not(.focus) > ul, .header-wrapper .main-navigation ul li.focus:hover > ul {
+  .header-wrapper .main-navigation ul li.focus > ul {
+    left: 30px;
+    top: 100%;
+  }
+  .header-wrapper .main-navigation ul li.menu-item-has-children.focus > div {
+    width: calc(100% + 30px);
+  }
+  .header-wrapper .main-navigation ul li:hover > ul,
+  .header-wrapper .main-navigation ul li > .focus > ul,
+  .header-wrapper .main-navigation ul li > .focus:hover > ul {
     left: 30px;
     top: 100%;
     position: absolute;
   }
-  .header-wrapper .main-navigation ul li:hover > span.dropdown-menu-icon:after,
-  .header-wrapper .main-navigation ul li:hover > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li:hover:not(.focus) > span.dropdown-menu-icon:after,
-  .header-wrapper .main-navigation ul li:hover:not(.focus) > span.dropdown-menu-icon:after, .header-wrapper .main-navigation ul li.focus:hover > span.dropdown-menu-icon:after,
-  .header-wrapper .main-navigation ul li.focus:hover > span.dropdown-menu-icon:after {
+  .header-wrapper .main-navigation ul li:hover > div > span.dropdown-menu-icon:after,
+  .header-wrapper .main-navigation ul li:hover > div > span.dropdown-menu-icon:after,
+  .header-wrapper .main-navigation ul li > .focus > div > span.dropdown-menu-icon:after,
+  .header-wrapper .main-navigation ul li > .focus > div > span.dropdown-menu-icon:after,
+  .header-wrapper .main-navigation ul li > .focus:hover > div > span.dropdown-menu-icon:after,
+  .header-wrapper .main-navigation ul li > .focus:hover > div > span.dropdown-menu-icon:after {
     content: "";
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
+    margin-top: 2px;
   }
   .header-wrapper .main-navigation ul ul {
     width: 200px;
@@ -1166,9 +1205,13 @@ a.menu-toggle,
     width: 200px;
     margin: 0;
   }
-  .header-wrapper .main-navigation ul ul li:hover > ul, .header-wrapper .main-navigation ul ul li.focus > ul {
+  .header-wrapper .main-navigation ul ul li:hover > ul,
+  .header-wrapper .main-navigation ul ul li > .focus > ul {
     left: 30px;
     top: 100%;
+  }
+  .header-wrapper .main-navigation ul ul li > .focus > ul {
+    top: calc(100% + 1px);
   }
   .header-wrapper .main-navigation ul > ul {
     display: inline-block;
