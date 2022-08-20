@@ -89,7 +89,7 @@
                                     class="header-section col-sm-12 col-md-12 header-menu-wrap">
                                     <div class="col-sm-12 section-element-inside">
                                         <nav id="site-navigation" class="main-navigation">
-                                            <a class="menu-toggle menu-toggle-animation classic-animation" aria-controls="primary-menu" aria-expanded="false">
+                                            <button class="menu-toggle menu-toggle-animation classic-animation" aria-controls="primary-menu" aria-expanded="false">
                                                 <span class="menu-toggle-text"><?php esc_html_e( 'Primary Menu', 'limeasyblog' ); ?></span>
                                                 <span class="menu-toggle-icon">
                                                     <span></span>
@@ -102,13 +102,14 @@
                                                     <span></span>
                                                     <span></span>
                                                 </span>
-                                            </a>
+                                            </button>
                                             <?php
                                                 wp_nav_menu(
                                                     array(
                                                         'theme_location'    => 'menu-1',
                                                         'menu_id'           => 'primary-menu',
-                                                        'after'             => '<span class="dropdown-menu-icon"></span>'
+                                                        'before'            => '<div class="ancestor-wrapper">',
+                                                        'after'             => '<span class="dropdown-menu-icon"></span></div>'
                                                     )
                                                 );
                                             ?>
