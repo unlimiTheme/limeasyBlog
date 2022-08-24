@@ -42,6 +42,10 @@ body.grand-retro a:hover, body.grand-retro a:focus, body.grand-retro a:active {
   color: #a21616;
 }
 
+body.grand-retro a:focus, body.grand-retro a:focus:hover {
+  outline: 1px solid #a21616;
+}
+
 body.grand-retro .site-main {
   padding-top: 80px;
   padding-bottom: 50px;
@@ -59,20 +63,21 @@ body.grand-retro input[type="submit"] {
   padding: 10px 20px;
 }
 
-body.grand-retro button:not(.customize-partial-edit-shortcut-button):hover,
+body.grand-retro button:not(.customize-partial-edit-shortcut-button):hover, body.grand-retro button:not(.customize-partial-edit-shortcut-button):focus,
 body.grand-retro input[type="button"]:hover,
+body.grand-retro input[type="button"]:focus,
 body.grand-retro input[type="reset"]:hover,
-body.grand-retro input[type="submit"]:hover {
-  opacity: 0.9;
+body.grand-retro input[type="reset"]:focus,
+body.grand-retro input[type="submit"]:hover,
+body.grand-retro input[type="submit"]:focus {
+  outline: none;
+  opacity: 0.8;
 }
 
-body.grand-retro button:not(.customize-partial-edit-shortcut-button):active, body.grand-retro button:not(.customize-partial-edit-shortcut-button):focus,
+body.grand-retro button:not(.customize-partial-edit-shortcut-button):active,
 body.grand-retro input[type="button"]:active,
-body.grand-retro input[type="button"]:focus,
 body.grand-retro input[type="reset"]:active,
-body.grand-retro input[type="reset"]:focus,
-body.grand-retro input[type="submit"]:active,
-body.grand-retro input[type="submit"]:focus {
+body.grand-retro input[type="submit"]:active {
   outline: none;
 }
 
@@ -263,6 +268,7 @@ body.grand-retro header.site-header .header-wrapper .main-navigation ul ul {
   background-color: #fff8be;
   -webkit-box-shadow: -1px -1px 0px #a2a2a2;
   box-shadow: -1px -1px 0px #a2a2a2;
+  padding-left: 0;
 }
 
 body.grand-retro header.site-header .header-wrapper .main-navigation ul li a {
@@ -272,15 +278,32 @@ body.grand-retro header.site-header .header-wrapper .main-navigation ul li a {
   padding: 3px 2px;
 }
 
-body.grand-retro header.site-header .header-wrapper .main-navigation ul li:hover:not(.focus) > a {
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li:hover > div > a {
   color: #a21616;
 }
 
-body.grand-retro header.site-header .header-wrapper .main-navigation ul.menu > li > a {
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li.focus > div, body.grand-retro header.site-header .header-wrapper .main-navigation ul li.focus:hover > div {
+  outline: 1px solid #a21616;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li.focus > div > a, body.grand-retro header.site-header .header-wrapper .main-navigation ul li.focus:hover > div > a {
+  outline: none;
+  color: #a21616;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul li.menu-item-has-children.focus > div, body.grand-retro header.site-header .header-wrapper .main-navigation ul li.menu-item-has-children.focus:hover > div, body.grand-retro header.site-header .header-wrapper .main-navigation ul li.page_item_has_children.focus > div, body.grand-retro header.site-header .header-wrapper .main-navigation ul li.page_item_has_children.focus:hover > div {
+  margin-top: -1px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation ul.menu > li > div > a {
   padding: 0;
 }
 
-body.grand-retro header.site-header .header-wrapper .main-navigation > div > ul > li > a {
+body.grand-retro header.site-header .header-wrapper .main-navigation ul.sub-menu li > div {
+  padding-left: 10px;
+}
+
+body.grand-retro header.site-header .header-wrapper .main-navigation > div > ul > li > div > a {
   font-size: 16px;
 }
 
@@ -310,6 +333,11 @@ body.grand-retro footer.site-footer a {
 
 body.grand-retro footer.site-footer a:hover {
   color: #b14141;
+}
+
+body.grand-retro footer.site-footer a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
 }
 
 body.grand-retro footer.site-footer .widget-title {
@@ -355,6 +383,11 @@ body.grand-retro aside.widget-area a {
 
 body.grand-retro aside.widget-area a:hover {
   color: #b14141;
+}
+
+body.grand-retro aside.widget-area a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
 }
 
 body.grand-retro aside.widget-area .widget-title {
@@ -462,6 +495,12 @@ body.grand-retro.single article .entry-footer a:hover {
   color: #b14141;
 }
 
+body.grand-retro.single article .entry-meta a:focus,
+body.grand-retro.single article .entry-footer a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
+}
+
 body.grand-retro.single article .entry-footer {
   margin-bottom: 0;
 }
@@ -531,6 +570,12 @@ body.grand-retro.single article .post-navigation .nav-next a:hover {
   color: #b14141;
 }
 
+body.grand-retro.single article .post-navigation .nav-previous a:focus,
+body.grand-retro.single article .post-navigation .nav-next a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
+}
+
 body.grand-retro.blog, body.grand-retro.search, body.grand-retro.archive {
   /* Archive base */
 }
@@ -598,6 +643,11 @@ body.grand-retro.blog article header.entry-header h2.entry-title a:hover, body.g
   color: #b14141;
 }
 
+body.grand-retro.blog article header.entry-header h2.entry-title a:focus, body.grand-retro.search article header.entry-header h2.entry-title a:focus, body.grand-retro.archive article header.entry-header h2.entry-title a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
+}
+
 body.grand-retro.blog article header.entry-header h2.entry-title a:after, body.grand-retro.search article header.entry-header h2.entry-title a:after, body.grand-retro.archive article header.entry-header h2.entry-title a:after {
   content: '';
   background: #fff8be;
@@ -644,6 +694,14 @@ body.grand-retro.blog article .entry-meta a:hover, body.grand-retro.search artic
 body.grand-retro.search article .entry-meta a:hover, body.grand-retro.archive article .posted-on a:hover,
 body.grand-retro.archive article .entry-meta a:hover {
   color: #b14141;
+}
+
+body.grand-retro.blog article .posted-on a:focus,
+body.grand-retro.blog article .entry-meta a:focus, body.grand-retro.search article .posted-on a:focus,
+body.grand-retro.search article .entry-meta a:focus, body.grand-retro.archive article .posted-on a:focus,
+body.grand-retro.archive article .entry-meta a:focus {
+  color: #b14141;
+  outline: 1px solid #a21616;
 }
 
 body.grand-retro.blog article .entry-footer, body.grand-retro.search article .entry-footer, body.grand-retro.archive article .entry-footer {
