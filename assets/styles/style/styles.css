@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body.grand-retro {
   /*** Title */
@@ -12,6 +13,8 @@ body.grand-retro {
 --------------------------------------------- */
   /* Elements
 --------------------------------------------- */
+  /* Text-level semantics
+	 ========================================================================== */
 }
 
 body.grand-retro {
@@ -224,6 +227,13 @@ body.grand-retro li > ul,
 body.grand-retro li > ol {
   margin-bottom: 0;
   margin-left: 0;
+}
+
+body.grand-retro code,
+body.grand-retro kbd,
+body.grand-retro samp {
+  background: #9e9e9e;
+  color: #444440;
 }
 
 body.grand-retro header.site-header .header-wrapper {
@@ -480,7 +490,7 @@ body.grand-retro.single article .entry-footer {
   body.grand-retro.single article .entry-meta,
   body.grand-retro.single article .entry-footer {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -536,8 +546,87 @@ body.grand-retro.single article .entry-content {
 @media only screen and (min-width: 600px) {
   body.grand-retro.single article .entry-content {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
+}
+
+body.grand-retro.single article p.wp-block-cover-text {
+  color: #fbfbfb;
+  font-size: 13px;
+}
+
+body.grand-retro.single article p.wp-block-cover-text a {
+  color: #fbfbfb;
+}
+
+body.grand-retro.single article p.wp-block-cover-text a:hover {
+  color: #a21616;
+}
+
+body.grand-retro.single article .wp-block-button a.wp-block-button__link {
+  border: none;
+  color: #fbfbfb;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: #b14141;
+  padding: 10px 20px;
+}
+
+body.grand-retro.single article .wp-block-button a.wp-block-button__link:hover, body.grand-retro.single article .wp-block-button a.wp-block-button__link:focus {
+  opacity: .8;
+}
+
+body.grand-retro.single article .blocks-gallery-grid .blocks-gallery-image figcaption,
+body.grand-retro.single article .blocks-gallery-grid .blocks-gallery-item figcaption,
+body.grand-retro.single article .wp-block-gallery .blocks-gallery-image figcaption,
+body.grand-retro.single article .wp-block-gallery .blocks-gallery-item figcaption {
+  line-height: 1.5;
+}
+
+body.grand-retro.single article blockquote::before, body.grand-retro.single article blockquote.wp-block-quote::before {
+  content: "”";
+  color: #9e9e9e;
+  opacity: 0.3;
+}
+
+body.grand-retro.single article blockquote.has-text-align-right::before, body.grand-retro.single article blockquote.wp-block-quote.has-text-align-right::before {
+  color: #9e9e9e;
+  opacity: 0.3;
+}
+
+body.grand-retro.single article blockquote.is-style-large::before, body.grand-retro.single article blockquote.wp-block-quote.is-style-large::before {
+  color: #9e9e9e;
+  opacity: 0.1;
+}
+
+body.grand-retro.single article .wp-block-pullquote::before {
+  background: none;
+  color: #9e9e9e;
+  opacity: 0.3;
+}
+
+body.grand-retro.single article a.wp-block-file__button {
+  background: #a21616;
+}
+
+body.grand-retro.single article a.wp-block-file__button:hover, body.grand-retro.single article a.wp-block-file__button:focus {
+  background: #b14141;
+}
+
+body.grand-retro.single article pre,
+body.grand-retro.single article fieldset,
+body.grand-retro.single article input,
+body.grand-retro.single article textarea,
+body.grand-retro.single article table,
+body.grand-retro.single article table *,
+body.grand-retro.single article hr {
+  border-color: #9e9e9e;
+}
+
+body.grand-retro.single article th,
+body.grand-retro.single article td {
+  border: 0.1rem solid #9e9e9e;
 }
 
 body.grand-retro.single article .post-navigation {
@@ -677,7 +766,7 @@ body.grand-retro.archive article .entry-meta {
   body.grand-retro.search article .entry-meta, body.grand-retro.archive article .posted-on,
   body.grand-retro.archive article .entry-meta {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -716,7 +805,7 @@ body.grand-retro.blog article .entry-footer, body.grand-retro.search article .en
 @media only screen and (min-width: 600px) {
   body.grand-retro.blog article .entry-footer, body.grand-retro.search article .entry-footer, body.grand-retro.archive article .entry-footer {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -751,7 +840,7 @@ body.grand-retro.blog article .entry-content, body.grand-retro.search article .e
 @media only screen and (min-width: 600px) {
   body.grand-retro.blog article .entry-content, body.grand-retro.search article .entry-content, body.grand-retro.archive article .entry-content {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -828,7 +917,7 @@ body.grand-retro .comments-area ol.comment-list li.comment .comment-body .commen
   body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content table,
   body.grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content pre {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -914,7 +1003,7 @@ body.grand-retro.search article .entry-content {
 @media only screen and (min-width: 600px) {
   body.grand-retro.search article .entry-content {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -931,7 +1020,7 @@ body.grand-retro.search article .entry-meta {
   body.grand-retro.search article .posted-on,
   body.grand-retro.search article .entry-meta {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -946,7 +1035,7 @@ body.grand-retro.search article .entry-footer {
 @media only screen and (min-width: 600px) {
   body.grand-retro.search article .entry-footer {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 
@@ -977,7 +1066,7 @@ body.grand-retro.page .entry-content {
 @media only screen and (min-width: 600px) {
   body.grand-retro.page .entry-content {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 1.7;
   }
 }
 /*# sourceMappingURL=styles.css.map */

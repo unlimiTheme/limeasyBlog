@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -126,6 +127,7 @@ kbd,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  background: lightgray;
 }
 
 /**
@@ -2050,6 +2052,90 @@ button.menu-toggle,
         -ms-flex: 1 0 50%;
             flex: 1 0 50%;
   }
+}
+
+blockquote, blockquote.wp-block-quote {
+  position: relative;
+  padding: 0 40px;
+  margin-bottom: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+
+blockquote cite, blockquote.wp-block-quote cite {
+  font-weight: bold;
+}
+
+blockquote::before, blockquote.wp-block-quote::before {
+  content: "”";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  color: gray;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+}
+
+blockquote.is-style-large::before, blockquote.wp-block-quote.is-style-large::before {
+  opacity: 0.1;
+  font-size: 200px;
+  top: -45px;
+  left: -5px;
+}
+
+blockquote.has-text-align-right::before, blockquote.wp-block-quote.has-text-align-right::before {
+  left: auto;
+  right: 0;
+}
+
+.wp-block-pullquote {
+  position: relative;
+}
+
+.wp-block-pullquote::before {
+  content: "”";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  background: #fff;
+  border-radius: 50%;
+  color: gray;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+  height: 30px;
+  width: 31px;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  text-align: center;
+}
+
+pre,
+fieldset,
+input,
+textarea,
+table,
+table *,
+hr {
+  border-color: gray;
+}
+
+th,
+td {
+  border: 0.1rem solid gray;
+  line-height: 1.4;
+  margin: 0;
+  overflow: visible;
+  padding: 0.5em;
 }
 
 .widget .widget-title {
