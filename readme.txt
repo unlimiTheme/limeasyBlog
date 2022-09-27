@@ -1,9 +1,9 @@
 === LimeasyBlog ===
 Contributors: unlimiTheme
 Tags: custom-logo, custom-menu, featured-images, right-sidebar, blog
-Tested up to: 5.7
+Tested up to: 6.0.2
 Stable tag: trunk
-Requires PHP: 5.5.0
+Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ LimeasyBlog is a super fast theme. Perfect for blogs.
 
 == Description ==
 
-LimeasyBlog is a fast and simple theme. It’s perfect for blogs.
+LimeasyBlog is a super fast theme perfect for blogs. LimeasyBlog is created with a minimalist design. Easily use with all the page builders you like. 
 
 == Installation ==
 
@@ -20,6 +20,19 @@ LimeasyBlog is a fast and simple theme. It’s perfect for blogs.
 3. Click Activate to use your new theme right away.
 
 == Copyright ==
+
+Limeasyblog WordPress Theme, Copyright 2022 unlimiTheme=
+Limeasyblog is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
 Font Awesome
 Font Awesome Icons licensed under CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/).
