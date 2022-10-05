@@ -56,6 +56,6 @@ function limeasyblog_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function limeasyblog_customize_preview_js() {
-	wp_enqueue_script( 'limeasyblog-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), LIMEASYBLOG_VERSION, true );
+	wp_enqueue_script( 'limeasyblog-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), LIMEASYBLOG_VERSION, true );
 }
 add_action( 'customize_preview_init', 'limeasyblog_customize_preview_js' );
