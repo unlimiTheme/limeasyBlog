@@ -31,6 +31,38 @@ function limeasyblog_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	// theme settings section
+	$wp_customize->add_section(
+		'limeasyblog_theme_setings_section',
+		array(
+			'title' => __( 'Theme settings', 'limeasyblog' ),
+			'priority' => 30,
+		)
+	);
+
+	$wp_customize->add_setting(
+		'limeasyblog_theme_setting_design',
+		array(
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'limeasyblog_sanitize_select',
+			'default' => 'grand-retro',
+		)
+	);
+
+	$wp_customize->add_control(
+		'limeasyblog_theme_setting_design',
+		array(
+			'type' => 'select',
+			'section' => 'limeasyblog_theme_setings_section',
+			'label' => __( 'Design', 'limeasyblog' ),
+			'description' => __( 'Select theme design', 'limeasyblog' ),
+			'choices' => array(
+				'grand-retro' => 'Grand Retro',
+				'blu-retro' => 'BluRetro',
+			),
+		)
+	);
 }
 add_action( 'customize_register', 'limeasyblog_customize_register' );
 
@@ -50,6 +82,23 @@ function limeasyblog_customize_partial_blogname() {
  */
 function limeasyblog_customize_partial_blogdescription() {
 	bloginfo( 'description' );
+}
+
+/**
+ * Sanitize select.
+ *
+ * @return mixed
+ */
+function limeasyblog_sanitize_select( $input, $setting ) {
+
+	// Ensure input is a slug.
+	$input = sanitize_key( $input );
+
+	// Get list of choices from the control associated with the setting.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
 
 /**

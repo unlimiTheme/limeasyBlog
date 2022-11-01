@@ -35,3 +35,43 @@ function limeasyblog_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'limeasyblog_pingback_header' );
+
+/**
+ * Get body classes
+ */
+if ( ! function_exists( 'limeasyblog_get_body_class' ) ) :
+
+	function limeasyblog_get_body_class() {
+
+		$design = get_theme_mod( 'limeasyblog_theme_setting_design' );
+		$design = $design ? $design : LIMEASYBLOG_DEFAULT_THEME_STYLE;
+
+		switch ( $design ) {
+			case 'grand-retro':
+				$class = '_ulmt__grand-retro';
+			break;
+			case 'blu-retro':
+				$class = '_ulmt__dos-theme';
+			break;
+			default:
+				$class = $design;
+		}
+
+		return $class;
+	}
+endif;
+
+/**
+ * Enqueue theme styles
+ */
+if ( ! function_exists( 'limeasyblog_enqueue_theme_style' ) ) :
+
+	function limeasyblog_enqueue_theme_style() {
+
+		$style = get_theme_mod( 'limeasyblog_theme_setting_design' );
+		$style = $style ? $style : LIMEASYBLOG_DEFAULT_THEME_STYLE;
+
+		wp_enqueue_style( 'limeasyblog-structure', get_template_directory_uri() . '/assets/styles/structure/structure.css', array(), LIMEASYBLOG_VERSION );
+		wp_enqueue_style( "limeasyblog-styles-$style", get_template_directory_uri() . "/assets/styles/style/$style/styles.css", array(), LIMEASYBLOG_VERSION );
+	}
+endif;
