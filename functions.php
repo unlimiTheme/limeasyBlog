@@ -12,8 +12,13 @@ if ( ! defined( 'LIMEASYBLOG_VERSION' ) ) {
 	define( 'LIMEASYBLOG_VERSION', '1.0.4' );
 }
 
-if ( ! defined( 'LIMEASYBLOG_TEMPLATE_DIRECTORY_URI' ) ) {
-	define( 'LIMEASYBLOG_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
+if ( ! defined( 'LIMEASYBLOG_DEFAULT_THEME_STYLE' ) ) {
+	// Default theme style.
+	define( 'LIMEASYBLOG_DEFAULT_THEME_STYLE', 'grand-retro' );
+}
+
+if ( ! defined( 'limeasyblog_TEMPLATE_DIRECTORY_URI' ) ) {
+	define( 'limeasyblog_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
 }
 
 if ( ! function_exists( 'limeasyblog_setup' ) ) :
@@ -218,9 +223,9 @@ function limeasyblog_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
-	wp_enqueue_style( 'limeasyblog-structure', get_template_directory_uri() . '/assets/styles/structure/structure.css', array(), LIMEASYBLOG_VERSION );
-	wp_enqueue_style( 'limeasyblog-styles', get_template_directory_uri() . '/assets/styles/style/styles.css', array(), LIMEASYBLOG_VERSION );
+
+	// enqueue theme style
+	limeasyblog_enqueue_theme_style();
 
 	wp_enqueue_script( 'limeasyblog-scripts', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), LIMEASYBLOG_VERSION, true );
 }

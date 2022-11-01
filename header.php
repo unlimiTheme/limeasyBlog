@@ -21,7 +21,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('grand-retro'); ?>>
+<body <?php body_class( limeasyblog_get_body_class() ); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
         <a class="skip-link screen-reader-text"
