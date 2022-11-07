@@ -17,6 +17,11 @@ if ( ! defined( 'LIMEASYBLOG_DEFAULT_THEME_STYLE' ) ) {
 	define( 'LIMEASYBLOG_DEFAULT_THEME_STYLE', 'grand-retro' );
 }
 
+if ( ! defined( 'LIMEASYBLOG_DEFAULT_FOOTER_COLUMNS' ) ) {
+	// Default footer columns number.
+	define( 'LIMEASYBLOG_DEFAULT_FOOTER_COLUMNS', '4' );
+}
+
 if ( ! defined( 'limeasyblog_TEMPLATE_DIRECTORY_URI' ) ) {
 	define( 'limeasyblog_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
 }
@@ -153,50 +158,6 @@ function limeasyblog_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer 1', 'limeasyblog' ),
-			'id'            => 'footer-1',
-			'description'   => esc_html__( 'Add widgets here.', 'limeasyblog' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer 2', 'limeasyblog' ),
-			'id'            => 'footer-2',
-			'description'   => esc_html__( 'Add widgets here.', 'limeasyblog' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer 3', 'limeasyblog' ),
-			'id'            => 'footer-3',
-			'description'   => esc_html__( 'Add widgets here.', 'limeasyblog' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer 4', 'limeasyblog' ),
-			'id'            => 'footer-4',
-			'description'   => esc_html__( 'Add widgets here.', 'limeasyblog' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
 }
 add_action( 'widgets_init', 'limeasyblog_widgets_init' );
 
@@ -257,3 +218,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Footer
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_footer.php';

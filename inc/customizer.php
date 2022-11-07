@@ -1,6 +1,6 @@
 <?php
 /**
- * limeasyblog Theme Customizer
+ * Limeasyblog Theme Customizer
  *
  * @package limeasyblog
  */
@@ -60,6 +60,72 @@ function limeasyblog_customize_register( $wp_customize ) {
 			'choices' => array(
 				'grand-retro' => 'Grand Retro',
 				'blu-retro' => 'BluRetro',
+			),
+		)
+	);
+
+	// footer settings section
+	$wp_customize->add_section(
+		'limeasyblog_footer_setings_section',
+		array(
+			'title' => __( 'Footer settings', 'limeasyblog' ),
+			'priority' => 30,
+		)
+	);
+
+	// columns number
+	$wp_customize->add_setting(
+		'limeasyblog_theme_footer_columns',
+		array(
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'limeasyblog_sanitize_select',
+			'default' => 3,
+		)
+	);
+
+	$wp_customize->add_control(
+		'limeasyblog_theme_footer_columns',
+		array(
+			'type' => 'select',
+			'section' => 'limeasyblog_footer_setings_section',
+			'label' => __( 'Columns', 'limeasyblog' ),
+			'description' => __( 'Select the footer columns number', 'limeasyblog' ),
+			'choices' => array(
+				1 => 1,
+				2 => 2,
+				3 => 3,
+				4 => 4,
+				6 => 6,
+				12 => 12
+			),
+		)
+	);
+
+	// columns width
+	$wp_customize->add_setting(
+		'limeasyblog_theme_footer_columns_width',
+		array(
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'limeasyblog_sanitize_select',
+			'default' => 'auto',
+		)
+	);
+
+	$wp_customize->add_control(
+		'limeasyblog_theme_footer_columns_width',
+		array(
+			'type' => 'select',
+			'section' => 'limeasyblog_footer_setings_section',
+			'label' => __( 'Columns', 'limeasyblog' ),
+			'description' => __( 'Select the footer columns number', 'limeasyblog' ),
+			'choices' => array(
+				'auto' => 'Auto',
+				1 => 1,
+				2 => 2,
+				3 => 3,
+				4 => 4,
+				6 => 6,
+				12 => 12
 			),
 		)
 	);
