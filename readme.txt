@@ -65,3 +65,6 @@ Screenshot resources:
 
 = 1.0.5 - November 08 2022 =
 * Option to select the number of footer columns
+
+= 1.0.6 - November 09 2022 =
+* Small fixes
