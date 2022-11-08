@@ -63,5 +63,5 @@ Screenshot resources:
 = 1.0.4 - November 01 2022 =
 * Added a new theme design
 
-= 1.0.5 - November 07 2022 =
+= 1.0.5 - November 08 2022 =
 * Option to select the number of footer columns
