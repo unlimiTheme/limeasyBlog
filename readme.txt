@@ -56,3 +56,12 @@ Screenshot resources:
 
 = 1.0.0 - August 01 2022 =
 * Initial release
+
+= 1.0.3 - October 10 2022 =
+* Fixeds bugs
+
+= 1.0.4 - November 01 2022 =
+* Added a new theme design
+
+= 1.0.5 - November 07 2022 =
+* Option to select the number of footer columns
