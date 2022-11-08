@@ -79,7 +79,7 @@ function limeasyblog_customize_register( $wp_customize ) {
 		array(
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'limeasyblog_sanitize_select',
-			'default' => 3,
+			'default' => 4,
 		)
 	);
 
