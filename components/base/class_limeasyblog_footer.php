@@ -126,7 +126,7 @@ class LimeasyblogFooter
                                 
                                 <?php do_action( "{$this->slug}_action_footer_widgets" ); ?>
 
-                                <?php do_action( "{$this->slug}_action_footer_copyrights" ); ?>
+                                <?php do_action( "{$this->slug}_action_footer_copyright" ); ?>
 
                             </div>
                         </div>
