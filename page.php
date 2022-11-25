@@ -17,23 +17,26 @@ get_header();
 
 <main id="primary" class="site-main">
 
-    <div id="page-0" class="page-section col-sm-12 col-md-12 wrap ">
-        <div class="container ">
-            <div class="row">
-                <div class="col-sm-12 section-element-inside ">
-                    <div class="row inside">
-                        <div id="page-ighnkfw2k5s" class="page-section col-sm-12 col-md-12 ">
-                            <div class="row">
-                                <div class="col-sm-12 section-element-inside ">
-                                    <div class="row inside">
-                                        <?php
-                                            while ( have_posts() ) :
-                                                the_post();
+    <?php if ( has_action('limeasyblog_action_page') === FALSE ): ?>
 
-                                                get_template_part( 'template-parts/content', 'page' );
+        <div id="page-0" class="page-section col-sm-12 col-md-12 wrap ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-sm-12 section-element-inside ">
+                        <div class="row inside">
+                            <div id="page-ighnkfw2k5s" class="page-section col-sm-12 col-md-12 ">
+                                <div class="row">
+                                    <div class="col-sm-12 section-element-inside ">
+                                        <div class="row inside">
+                                            <?php
+                                                while ( have_posts() ) :
+                                                    the_post();
 
-                                            endwhile; // End of the loop.
-                                        ?>
+                                                    get_template_part( 'template-parts/content', 'page' );
+
+                                                endwhile; // End of the loop.
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +45,12 @@ get_header();
                 </div>
             </div>
         </div>
-    </div>
+
+    <?php else: ?>
+
+        <?php do_action( 'limeasyblog_action_page' ); ?>
+
+    <?php endif; ?>
 
 </main><!-- #main -->
 

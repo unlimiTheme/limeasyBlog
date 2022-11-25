@@ -10,7 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+
+    <?php if ( has_action('limeasyblog_action_archive') === FALSE ): ?>
 
         <div id="archive-0" class="blog-section col-sm-12 col-md-12 blog-wrap ">
             <div class="container ">
@@ -65,18 +67,26 @@ get_header();
                                     </div>
                                 </div>
                             </div>
+
                             <div id="archive-ighn3kfw2k5s" class="blog-section col-sm-12 col-md-3">
                                 <div class="col-sm-12 section-element-inside ">
                                     <?php get_sidebar(); ?>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            
-	</main><!-- #main -->
+        
+    <?php else: ?>
+
+        <?php do_action( 'limeasyblog_action_archive' ); ?>
+
+    <?php endif; ?>
+
+</main><!-- #main -->
 
 <?php
 get_footer();
