@@ -223,3 +223,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Footer
  */
 require get_template_directory() . '/components/base/class_limeasyblog_footer.php';
+
+/**
+ * Blog
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_blog.php';
+
+/**
+ * Archive
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_archive.php';
+
+/**
+ * Search
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_search.php';

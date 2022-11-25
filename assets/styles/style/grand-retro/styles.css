@@ -241,7 +241,7 @@ body._ulmt__grand-retro header.site-header .header-wrapper {
   padding-top: 20px;
 }
 
-body._ulmt__grand-retro header.site-header .header-wrapper .site-title {
+body._ulmt__grand-retro header.site-header .header-wrapper .site-branding .site-title {
   margin-bottom: 0;
   font-weight: 700;
   font-size: 16px;
@@ -249,23 +249,35 @@ body._ulmt__grand-retro header.site-header .header-wrapper .site-title {
 }
 
 @media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro header.site-header .header-wrapper .site-title {
+  body._ulmt__grand-retro header.site-header .header-wrapper .site-branding .site-title {
     text-align: left;
   }
 }
 
-body._ulmt__grand-retro header.site-header .header-wrapper .site-title a {
+body._ulmt__grand-retro header.site-header .header-wrapper .site-branding .site-title a {
   text-decoration: none;
 }
 
-body._ulmt__grand-retro header.site-header .header-wrapper .site-description {
+body._ulmt__grand-retro header.site-header .header-wrapper .site-branding .site-description {
   font-size: 12px;
   font-weight: 400;
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro header.site-header .header-wrapper .site-description {
+  body._ulmt__grand-retro header.site-header .header-wrapper .site-branding .site-description {
+    text-align: left;
+  }
+}
+
+body._ulmt__grand-retro header.site-header .header-wrapper .site-branding a.custom-logo-link {
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  body._ulmt__grand-retro header.site-header .header-wrapper .site-branding a.custom-logo-link {
+    width: auto;
     text-align: left;
   }
 }
@@ -285,7 +297,13 @@ body._ulmt__grand-retro header.site-header .header-wrapper .main-navigation ul l
   color: #444440;
   font-size: 12px;
   font-weight: 700;
-  padding: 3px 2px;
+  padding: 1px 2px;
+}
+
+@media only screen and (min-width: 600px) {
+  body._ulmt__grand-retro header.site-header .header-wrapper .main-navigation ul li a {
+    font-size: 14px;
+  }
 }
 
 body._ulmt__grand-retro header.site-header .header-wrapper .main-navigation ul li:hover > div > a {
@@ -360,7 +378,6 @@ body._ulmt__grand-retro footer.site-footer .widget-title {
 
 body._ulmt__grand-retro footer.site-footer .footer-site-info-wrap {
   text-align: center;
-  padding: 20px 0 0;
   font-size: 11px;
 }
 
@@ -536,18 +553,11 @@ body._ulmt__grand-retro.single article .posted-on-wrap .row.inside > div:nth-chi
 }
 
 body._ulmt__grand-retro.single article .entry-content {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #444440;
-}
-
-@media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro.single article .entry-content {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 }
 
 body._ulmt__grand-retro.single article p.wp-block-cover-text {
@@ -830,18 +840,11 @@ body._ulmt__grand-retro.blog article .posted-on-wrap .row.inside > div:nth-child
 }
 
 body._ulmt__grand-retro.blog article .entry-content, body._ulmt__grand-retro.search article .entry-content, body._ulmt__grand-retro.archive article .entry-content {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #444440;
-}
-
-@media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro.blog article .entry-content, body._ulmt__grand-retro.search article .entry-content, body._ulmt__grand-retro.archive article .entry-content {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 }
 
 body._ulmt__grand-retro .comments-area {
@@ -901,24 +904,11 @@ body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body 
 body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content span,
 body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content table,
 body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content pre {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #444440;
-}
-
-@media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content p,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ul,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content ol,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content li,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content span,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content table,
-  body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .comment-content pre {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 }
 
 body._ulmt__grand-retro .comments-area ol.comment-list li.comment .comment-body .reply {
@@ -993,18 +983,11 @@ body._ulmt__grand-retro.search article .entry-header h2.entry-title a {
 }
 
 body._ulmt__grand-retro.search article .entry-content {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #444440;
-}
-
-@media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro.search article .entry-content {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 }
 
 body._ulmt__grand-retro.search article .posted-on,
@@ -1056,17 +1039,10 @@ body._ulmt__grand-retro.page h1.entry-title {
 }
 
 body._ulmt__grand-retro.page .entry-content {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 19px;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #444440;
-}
-
-@media only screen and (min-width: 600px) {
-  body._ulmt__grand-retro.page .entry-content {
-    font-size: 13px;
-    line-height: 1.7;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

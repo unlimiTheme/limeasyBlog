@@ -202,7 +202,6 @@ class LimeasyblogFooter
                                         <?php
                                             /* translators: 1: Theme name, 2: Theme author. */
                                             printf( esc_html__( 'Theme: %1$s by %2$s.', 'limeasyblog' ), 'limeasyblog', '<a>unlimiTheme</a>' );
-
                                         ?>
                                     </div><!-- .site-info -->
                                 </div>

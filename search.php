@@ -10,7 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+
+    <?php if ( has_action('limeasyblog_action_search') === FALSE ): ?>
 
         <div id="search-0" class="blog-section col-sm-12 col-md-12 blog-wrap ">
             <div class="container ">
@@ -78,7 +80,13 @@ get_header();
             </div>
         </div>
 
-	</main><!-- #main -->
+    <?php else: ?>
+
+        <?php do_action( 'limeasyblog_action_search' ); ?>
+
+    <?php endif; ?>
+
+</main><!-- #main -->
 
 <?php
 get_footer();
