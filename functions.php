@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIMEASYBLOG_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIMEASYBLOG_VERSION', '1.0.7' );
+	define( 'LIMEASYBLOG_VERSION', '1.0.8' );
 }
 
 if ( ! defined( 'LIMEASYBLOG_DEFAULT_THEME_STYLE' ) ) {
@@ -22,8 +22,8 @@ if ( ! defined( 'LIMEASYBLOG_DEFAULT_FOOTER_COLUMNS' ) ) {
 	define( 'LIMEASYBLOG_DEFAULT_FOOTER_COLUMNS', '4' );
 }
 
-if ( ! defined( 'limeasyblog_TEMPLATE_DIRECTORY_URI' ) ) {
-	define( 'limeasyblog_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
+if ( ! defined( 'LIMEASYBLOG_TEMPLATE_DIRECTORY_URI' ) ) {
+	define( 'LIMEASYBLOG_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
 }
 
 if ( ! function_exists( 'limeasyblog_setup' ) ) :
