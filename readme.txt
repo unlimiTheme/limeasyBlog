@@ -1,6 +1,6 @@
 === LimeasyBlog ===
 Contributors: unlimiTheme
-Tags: custom-logo, custom-menu, featured-images, right-sidebar, blog, translation ready, accessibility ready, theme options, sticky post
+Tags: custom-logo, custom-menu, featured-images, right-sidebar, blog, translation-ready, accessibility-ready, theme-options, sticky-post, footer-widgets
 Tested up to: 6.0.2
 Stable tag: trunk
 Requires PHP: 5.6.0
