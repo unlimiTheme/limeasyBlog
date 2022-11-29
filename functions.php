@@ -23,7 +23,7 @@ if ( ! defined( 'LIMEASYBLOG_DEFAULT_FOOTER_COLUMNS' ) ) {
 }
 
 if ( ! defined( 'limeasyblog_TEMPLATE_DIRECTORY_URI' ) ) {
-	define( 'limeasyblog_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
+	define( 'LIMEASYBLOG_TEMPLATE_DIRECTORY_URI', is_child_theme() ? get_theme_file_path() : get_template_directory_uri() );
 }
 
 if ( ! function_exists( 'limeasyblog_setup' ) ) :
@@ -238,3 +238,13 @@ require get_template_directory() . '/components/base/class_limeasyblog_archive.p
  * Search
  */
 require get_template_directory() . '/components/base/class_limeasyblog_search.php';
+
+/**
+ * Single
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_single.php';
+
+/**
+ * Page
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_page.php';
