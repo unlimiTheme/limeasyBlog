@@ -44,7 +44,7 @@ get_header();
 
     <?php else: ?>
 
-        <?php do_action( 'limeasyblog_action_search' ); ?>
+        <?php do_action( 'limeasyblog_action_single' ); ?>
 
     <?php endif; ?>
 

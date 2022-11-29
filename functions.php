@@ -238,3 +238,13 @@ require get_template_directory() . '/components/base/class_limeasyblog_archive.p
  * Search
  */
 require get_template_directory() . '/components/base/class_limeasyblog_search.php';
+
+/**
+ * Single
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_single.php';
+
+/**
+ * Page
+ */
+require get_template_directory() . '/components/base/class_limeasyblog_page.php';
