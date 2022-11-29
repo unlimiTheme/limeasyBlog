@@ -70,8 +70,11 @@ Screenshot resources:
 * Small fixes
 
 = 1.0.7 - November 25 2022 =
-* Added dynamic sidebars for archive, index and search page.
+* Added dynamic sidebars for archive, index and search page
 * Small style improvements for Grand retro Theme design
 
 = 1.0.8 - November 25 2022 =
 * Small fixes
+
+= 1.0.9 - November 29 2022 =
+* Added dynamic sidebars for page and single post
