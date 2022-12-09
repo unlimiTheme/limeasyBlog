@@ -52,15 +52,10 @@ class LimeasyblogArchive
         'content' => 9,
     ];
 
-    // /**
-    //  * Use default sidebar
-    //  * 
-    //  * @since 1.0.0
-    //  */
-    // protected $useDefaultSidebar = true;
-
     /**
+     * Blog
      * 
+     * @since 1.0.0
      */
     protected $blog;
 
@@ -119,8 +114,8 @@ class LimeasyblogArchive
      */
     public function registerWidgets()
     {
-        $sidebars_left = get_theme_mod( 'limeasyblog_archive_sidebars_no_left', 0 );
-        $sidebars_right = get_theme_mod( 'limeasyblog_archive_sidebars_no_right', 0 );
+        $sidebars_left = get_theme_mod( 'limeasyblog_archive_sidebars_no_left', '0' );
+        $sidebars_right = get_theme_mod( 'limeasyblog_archive_sidebars_no_right', '0' );
 
         // left sidebar
         if ( $sidebars_left > 0 ) {

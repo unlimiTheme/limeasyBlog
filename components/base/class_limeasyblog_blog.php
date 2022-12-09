@@ -105,8 +105,8 @@ class LimeasyblogBlog
      */
     public function registerWidgets()
     {
-        $sidebars_left = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', 0 );
-        $sidebars_right = get_theme_mod( 'limeasyblog_blog_sidebars_no_right', 0 );
+        $sidebars_left = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', '0' );
+        $sidebars_right = get_theme_mod( 'limeasyblog_blog_sidebars_no_right', '0' );
 
         // left sidebar
         if ( $sidebars_left > 0 ) {
@@ -239,7 +239,7 @@ class LimeasyblogBlog
      */
     public function doBlogSidebarsLeft()
     {
-        $sidebars = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', 0 );
+        $sidebars = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', '0' );
 
         $this->columnsWidth();
         $width = $this->width['left'];
@@ -362,7 +362,7 @@ class LimeasyblogBlog
     public function getSidebarsNoLeft()
     {
         // there is not left sidebar by default
-        $sidebars = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', 0 );
+        $sidebars = get_theme_mod( 'limeasyblog_blog_sidebars_no_left', '0' );
 
         return $sidebars;
     }
