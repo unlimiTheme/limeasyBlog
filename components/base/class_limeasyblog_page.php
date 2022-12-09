@@ -210,19 +210,13 @@ class LimeasyblogPage
      */
     public function doPageSidebarsLeft()
     {
-        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_left', 'inherit' );
+        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_left', '0' );
 
         $this->columnsWidth();
         $width = $this->width['left'];
 
         // no sidebar
         if ( $sidebars === '0' ) {
-            return;
-        }
-
-        // inherited sidebar
-        if ( $sidebars === 'inherit' ) {
-            $this->blog->doBlogSidebarsLeft();
             return;
         }
 
@@ -244,19 +238,13 @@ class LimeasyblogPage
      */
     public function doPageSidebarsRight()
     {
-        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_right', 'inherit' );
+        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_right', '0' );
 
         $this->columnsWidth();
         $width = $this->width['right'];
 
         // no sidebar
         if ( $sidebars === '0' ) {
-            return;
-        }
-
-        // inherited sidebar
-        if ( $sidebars === 'inherit' ) {
-            $this->blog->doBlogSidebarsRight();
             return;
         }
 
@@ -309,11 +297,7 @@ class LimeasyblogPage
      */
     public function getSidebarsNoLeft()
     {
-        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_left', 'inherit' );
-
-        if ( $sidebars === 'inherit' ) {
-            $sidebars = $this->blog->getSidebarsNoLeft();
-        }
+        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_left', '0' );
 
         return $sidebars;
     }
@@ -323,11 +307,7 @@ class LimeasyblogPage
      */
     public function getSidebarsNoRight()
     {
-        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_right', 'inherit' );
-
-        if ( $sidebars === 'inherit' ) {
-            $sidebars = $this->blog->getSidebarsNoRight();
-        }
+        $sidebars = get_theme_mod( 'limeasyblog_page_sidebars_no_right', '0' );
 
         return $sidebars;
     }
