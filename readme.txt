@@ -78,3 +78,6 @@ Screenshot resources:
 
 = 1.0.9 - November 29 2022 =
 * Added dynamic sidebars for page and single post
+
+= 1.0.10 - January 06 2023 =
+* Custom posts navigation
