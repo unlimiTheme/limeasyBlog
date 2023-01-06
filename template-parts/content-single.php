@@ -160,6 +160,9 @@
                                 </div>
                             </div>
                         </div>
+
+                        <?php do_action( 'limeasyblog_action_single_author_box' ); ?>
+
                         <div id="post-76s2tu2u812"
                             class="excerpt-section col-sm-12 col-md-12">
                             <div class="row">

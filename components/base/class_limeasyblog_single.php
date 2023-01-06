@@ -38,6 +38,7 @@ class LimeasyblogSingle
         'single_content',
         'single_sidebars_left',
         'single_sidebars_right',
+        'single_author_box'
     ];
 
     /**
@@ -202,6 +203,7 @@ class LimeasyblogSingle
 
                     endwhile; // End of the loop.
                 ?>
+
             </div>
         </div>
 
@@ -299,6 +301,45 @@ class LimeasyblogSingle
     }
 
     /**
+     * Author box
+     */
+    public function doSingleAuthorBox()
+    {
+        $show_author_box = get_theme_mod( 'limeasyblog_single_author_box', false );
+
+        // do not show the author box
+        if ($show_author_box !== true) {
+            return;
+        }
+
+        ?>
+
+        <div id="post-76s2tu2u815" class="excerpt-section col-sm-12 col-md-12">
+            <div class="row">
+                <div class="col-sm-12 section-element-inside ">
+                    <div class="row inside">
+
+                        <div id="author-info" class="the-author-info-box">
+                            <div class="author-avatar">
+                                <?php echo get_avatar( get_the_author_meta('user_email'), '80', '' ); ?>
+                            </div>
+                            <div class="author-nickname">
+                                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author_meta('nickname'); ?></a>
+                            </div>
+                            <div class="author-description">
+                                <?php echo nl2br( get_the_author_meta('description') ); ?>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php
+    }
+
+    /**
      * Get columns width
      */
     public function columnsWidth()
@@ -362,7 +403,7 @@ class LimeasyblogSingle
      */
     public function customizeRegisterHelper( $wp_customize )
     {
-        // blog settings section
+        // settings section
         $wp_customize->add_section(
             'limeasyblog_single_setings_section',
             array(
@@ -371,7 +412,7 @@ class LimeasyblogSingle
             )
         );
 
-        // blog left sidebars number
+        // left sidebars number
         $wp_customize->add_setting(
             'limeasyblog_single_sidebars_no_left',
             array(
@@ -381,7 +422,7 @@ class LimeasyblogSingle
             )
         );
 
-        // blog left sidebars number control
+        // left sidebars number control
         $wp_customize->add_control(
             'limeasyblog_single_sidebars_no_left',
             array(
@@ -398,7 +439,7 @@ class LimeasyblogSingle
             )
         );
 
-        // blog right sidebars number
+        // right sidebars number
         $wp_customize->add_setting(
             'limeasyblog_single_sidebars_no_right',
             array(
@@ -408,7 +449,7 @@ class LimeasyblogSingle
             )
         );
 
-        // blog right sidebars number control
+        // right sidebars number control
         $wp_customize->add_control(
             'limeasyblog_single_sidebars_no_right',
             array(
@@ -423,7 +464,52 @@ class LimeasyblogSingle
                     2 => 2,
                 ),
             )
-        );    
+        );
+
+        // author box settings
+        $wp_customize->add_setting(
+            'limeasyblog_single_author_box',
+            array(
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'limeasyblog_sanitize_checkbox',
+                'default' => '',
+            )
+        );
+
+        // author box control
+        $wp_customize->add_control(
+            'limeasyblog_single_author_box',
+            array(
+                'type' => 'checkbox',
+                'section' => 'limeasyblog_single_setings_section',
+                'label' => __( 'Show author box', 'limeasyblog' ),
+                'description' => __( 'Show author box on single page', 'limeasyblog' ),
+            )
+        );
+
+        // author box type
+        $wp_customize->add_setting(
+            'limeasyblog_single_author_box_type',
+            array(
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'limeasyblog_sanitize_select',
+                'default' => 'default',
+            )
+        );
+
+        // author box type
+        $wp_customize->add_control(
+            'limeasyblog_single_author_box_type',
+            array(
+                'type' => 'select',
+                'section' => 'limeasyblog_single_setings_section',
+                'label' => __( 'Author box type', 'limeasyblog' ),
+                'description' => __( 'Choose the author box type', 'limeasyblog' ),
+                'choices' => array(
+                    'default' => 'Default',
+                ),
+            )
+        );
     }
 }
 
