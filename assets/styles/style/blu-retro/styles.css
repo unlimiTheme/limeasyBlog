@@ -279,7 +279,7 @@ body._ulmt__dos-theme header.site-header .header-wrapper {
   padding-top: 20px;
 }
 
-body._ulmt__dos-theme header.site-header .header-wrapper .site-title {
+body._ulmt__dos-theme header.site-header .header-wrapper .site-branding .site-title {
   margin-bottom: 0;
   font-weight: 700;
   font-size: 16px;
@@ -287,24 +287,31 @@ body._ulmt__dos-theme header.site-header .header-wrapper .site-title {
 }
 
 @media only screen and (min-width: 600px) {
-  body._ulmt__dos-theme header.site-header .header-wrapper .site-title {
+  body._ulmt__dos-theme header.site-header .header-wrapper .site-branding .site-title {
     text-align: left;
   }
 }
 
-body._ulmt__dos-theme header.site-header .header-wrapper .site-title a {
+body._ulmt__dos-theme header.site-header .header-wrapper .site-branding .site-title a {
   text-decoration: none;
 }
 
-body._ulmt__dos-theme header.site-header .header-wrapper .site-description {
+body._ulmt__dos-theme header.site-header .header-wrapper .site-branding .site-description {
   font-size: 12px;
   font-weight: 400;
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
-  body._ulmt__dos-theme header.site-header .header-wrapper .site-description {
+  body._ulmt__dos-theme header.site-header .header-wrapper .site-branding .site-description {
     text-align: left;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body._ulmt__dos-theme header.site-header .header-wrapper .site-branding a.custom-logo-link {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -725,7 +732,9 @@ body._ulmt__dos-theme.single article td {
   border: 0.1rem solid #b8b8b8;
 }
 
-body._ulmt__dos-theme.single article .post-navigation {
+body._ulmt__dos-theme.single article .comment-navigation,
+body._ulmt__dos-theme.single article .post-navigation,
+body._ulmt__dos-theme.single article .navigation {
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 20px 0;
@@ -736,37 +745,59 @@ body._ulmt__dos-theme.single article .post-navigation {
   border-right: none;
 }
 
-body._ulmt__dos-theme.single article .post-navigation .nav-subtitle {
+body._ulmt__dos-theme.single article .comment-navigation .nav-subtitle,
+body._ulmt__dos-theme.single article .post-navigation .nav-subtitle,
+body._ulmt__dos-theme.single article .navigation .nav-subtitle {
   display: none;
 }
 
+body._ulmt__dos-theme.single article .comment-navigation .nav-previous a:after,
+body._ulmt__dos-theme.single article .comment-navigation .nav-next a:after,
 body._ulmt__dos-theme.single article .post-navigation .nav-previous a:after,
-body._ulmt__dos-theme.single article .post-navigation .nav-next a:after {
+body._ulmt__dos-theme.single article .post-navigation .nav-next a:after,
+body._ulmt__dos-theme.single article .navigation .nav-previous a:after,
+body._ulmt__dos-theme.single article .navigation .nav-next a:after {
   content: "";
   border: solid #0000aa;
   border-width: 0 2px 2px 0;
 }
 
+body._ulmt__dos-theme.single article .comment-navigation .nav-previous a,
+body._ulmt__dos-theme.single article .comment-navigation .nav-next a,
 body._ulmt__dos-theme.single article .post-navigation .nav-previous a,
-body._ulmt__dos-theme.single article .post-navigation .nav-next a {
+body._ulmt__dos-theme.single article .post-navigation .nav-next a,
+body._ulmt__dos-theme.single article .navigation .nav-previous a,
+body._ulmt__dos-theme.single article .navigation .nav-next a {
   font-size: 12px;
   font-weight: 400;
   color: #0000aa;
   text-decoration: none;
 }
 
+body._ulmt__dos-theme.single article .comment-navigation .nav-previous a:hover,
+body._ulmt__dos-theme.single article .comment-navigation .nav-next a:hover,
 body._ulmt__dos-theme.single article .post-navigation .nav-previous a:hover,
-body._ulmt__dos-theme.single article .post-navigation .nav-next a:hover {
+body._ulmt__dos-theme.single article .post-navigation .nav-next a:hover,
+body._ulmt__dos-theme.single article .navigation .nav-previous a:hover,
+body._ulmt__dos-theme.single article .navigation .nav-next a:hover {
   color: #00a6aa;
 }
 
+body._ulmt__dos-theme.single article .comment-navigation .nav-previous a:hover:after,
+body._ulmt__dos-theme.single article .comment-navigation .nav-next a:hover:after,
 body._ulmt__dos-theme.single article .post-navigation .nav-previous a:hover:after,
-body._ulmt__dos-theme.single article .post-navigation .nav-next a:hover:after {
+body._ulmt__dos-theme.single article .post-navigation .nav-next a:hover:after,
+body._ulmt__dos-theme.single article .navigation .nav-previous a:hover:after,
+body._ulmt__dos-theme.single article .navigation .nav-next a:hover:after {
   border-color: #00a6aa;
 }
 
+body._ulmt__dos-theme.single article .comment-navigation .nav-previous a:focus,
+body._ulmt__dos-theme.single article .comment-navigation .nav-next a:focus,
 body._ulmt__dos-theme.single article .post-navigation .nav-previous a:focus,
-body._ulmt__dos-theme.single article .post-navigation .nav-next a:focus {
+body._ulmt__dos-theme.single article .post-navigation .nav-next a:focus,
+body._ulmt__dos-theme.single article .navigation .nav-previous a:focus,
+body._ulmt__dos-theme.single article .navigation .nav-next a:focus {
   color: #00a6aa;
   outline: 1px solid #00a6aa;
 }

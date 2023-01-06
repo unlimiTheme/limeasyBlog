@@ -1943,37 +1943,40 @@ button.menu-toggle,
           transition-delay: 100ms;
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+.comment-navigation.posts-navigation, .comment-navigation.post-navigation,
+.navigation.posts-navigation,
+.navigation.post-navigation {
   margin: 0 0 1.5em;
 }
 
-.comment-navigation .nav-previous,
-.comment-navigation .nav-next,
-.posts-navigation .nav-previous,
-.posts-navigation .nav-next,
-.post-navigation .nav-previous,
-.post-navigation .nav-next {
+.comment-navigation.posts-navigation .nav-previous,
+.comment-navigation.posts-navigation .nav-next, .comment-navigation.post-navigation .nav-previous,
+.comment-navigation.post-navigation .nav-next,
+.navigation.posts-navigation .nav-previous,
+.navigation.posts-navigation .nav-next,
+.navigation.post-navigation .nav-previous,
+.navigation.post-navigation .nav-next {
   position: relative;
 }
 
-.comment-navigation .nav-previous a,
-.comment-navigation .nav-next a,
-.posts-navigation .nav-previous a,
-.posts-navigation .nav-next a,
-.post-navigation .nav-previous a,
-.post-navigation .nav-next a {
+.comment-navigation.posts-navigation .nav-previous a,
+.comment-navigation.posts-navigation .nav-next a, .comment-navigation.post-navigation .nav-previous a,
+.comment-navigation.post-navigation .nav-next a,
+.navigation.posts-navigation .nav-previous a,
+.navigation.posts-navigation .nav-next a,
+.navigation.post-navigation .nav-previous a,
+.navigation.post-navigation .nav-next a {
   padding-left: 30px;
   display: block;
 }
 
-.comment-navigation .nav-previous a:after,
-.comment-navigation .nav-next a:after,
-.posts-navigation .nav-previous a:after,
-.posts-navigation .nav-next a:after,
-.post-navigation .nav-previous a:after,
-.post-navigation .nav-next a:after {
+.comment-navigation.posts-navigation .nav-previous a:after,
+.comment-navigation.posts-navigation .nav-next a:after, .comment-navigation.post-navigation .nav-previous a:after,
+.comment-navigation.post-navigation .nav-next a:after,
+.navigation.posts-navigation .nav-previous a:after,
+.navigation.posts-navigation .nav-next a:after,
+.navigation.post-navigation .nav-previous a:after,
+.navigation.post-navigation .nav-next a:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1987,41 +1990,41 @@ button.menu-toggle,
           transform: rotate(135deg);
 }
 
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
+.comment-navigation.posts-navigation .nav-links, .comment-navigation.post-navigation .nav-links,
+.navigation.posts-navigation .nav-links,
+.navigation.post-navigation .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.comment-navigation.posts-navigation .nav-previous, .comment-navigation.post-navigation .nav-previous,
+.navigation.posts-navigation .nav-previous,
+.navigation.post-navigation .nav-previous {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.comment-navigation.posts-navigation .nav-next, .comment-navigation.post-navigation .nav-next,
+.navigation.posts-navigation .nav-next,
+.navigation.post-navigation .nav-next {
   text-align: end;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
 }
 
-.comment-navigation .nav-next a,
-.posts-navigation .nav-next a,
-.post-navigation .nav-next a {
+.comment-navigation.posts-navigation .nav-next a, .comment-navigation.post-navigation .nav-next a,
+.navigation.posts-navigation .nav-next a,
+.navigation.post-navigation .nav-next a {
   padding-left: 0;
   padding-right: 30px;
 }
 
-.comment-navigation .nav-next a:after,
-.posts-navigation .nav-next a:after,
-.post-navigation .nav-next a:after {
+.comment-navigation.posts-navigation .nav-next a:after, .comment-navigation.post-navigation .nav-next a:after,
+.navigation.posts-navigation .nav-next a:after,
+.navigation.post-navigation .nav-next a:after {
   content: "";
   right: 8px;
   left: auto;
@@ -2030,28 +2033,151 @@ button.menu-toggle,
 }
 
 @media screen and (min-width: 37.5em) {
-  .comment-navigation .nav-links,
-  .posts-navigation .nav-links,
-  .post-navigation .nav-links {
+  .comment-navigation.posts-navigation .nav-links, .comment-navigation.post-navigation .nav-links,
+  .navigation.posts-navigation .nav-links,
+  .navigation.post-navigation .nav-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .comment-navigation .nav-previous,
-  .posts-navigation .nav-previous,
-  .post-navigation .nav-previous {
+  .comment-navigation.posts-navigation .nav-previous, .comment-navigation.post-navigation .nav-previous,
+  .navigation.posts-navigation .nav-previous,
+  .navigation.post-navigation .nav-previous {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
             flex: 1 0 50%;
   }
-  .comment-navigation .nav-next,
-  .posts-navigation .nav-next,
-  .post-navigation .nav-next {
+  .comment-navigation.posts-navigation .nav-next, .comment-navigation.post-navigation .nav-next,
+  .navigation.posts-navigation .nav-next,
+  .navigation.post-navigation .nav-next {
     text-align: end;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
             flex: 1 0 50%;
   }
+}
+
+.comment-navigation.paging-navigation,
+.navigation.paging-navigation {
+  margin: 0 0 1.5em;
+  /*
+    .nav-previous,
+    .nav-next {
+        position: relative;
+        a {
+            padding-left: 30px;
+            display: block;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 8px;
+                padding: 5px;
+                border: solid gray;
+                border-width: 0 2px 2px 0;
+                -webkit-transition: 0.5s ease all;
+                transition: 0.5s ease all;
+                @include rotate(135deg);
+            }
+        }
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-previous {
+        flex: 1 0 50%;
+    }
+    .nav-next {
+        text-align: end;
+        flex: 1 0 50%;
+        a {
+            padding-left: 0;
+            padding-right: 30px;
+            &:after {
+                content: "";
+                right: 8px;
+                left: auto;
+                @include rotate(315deg);
+            }
+        }
+    }
+    @media screen and (min-width: 37.5em) {
+        .nav-links {
+            display: flex;
+        }
+        .nav-previous {
+            flex: 1 0 50%;
+        }
+        .nav-next {
+            text-align: end;
+            flex: 1 0 50%;
+        }
+    }   
+    */
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers,
+.comment-navigation.paging-navigation .pagination.loop-pagination span,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers,
+.navigation.paging-navigation .pagination.loop-pagination span {
+  text-decoration: none;
+  position: relative;
+  padding: 0 10px 0 10px;
+  display: block;
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.prev, .comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.prev,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.next,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.prev,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next,
+.navigation.paging-navigation .pagination.loop-pagination span.prev,
+.navigation.paging-navigation .pagination.loop-pagination span.next {
+  padding-left: 30px;
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.prev:after, .comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next:after,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.prev:after,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.next:after,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.prev:after,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next:after,
+.navigation.paging-navigation .pagination.loop-pagination span.prev:after,
+.navigation.paging-navigation .pagination.loop-pagination span.next:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  padding: 5px;
+  border: solid gray;
+  border-width: 0 2px 2px 0;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.next,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next,
+.navigation.paging-navigation .pagination.loop-pagination span.next {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next:after,
+.comment-navigation.paging-navigation .pagination.loop-pagination span.next:after,
+.navigation.paging-navigation .pagination.loop-pagination a.page-numbers.next:after,
+.navigation.paging-navigation .pagination.loop-pagination span.next:after {
+  content: "";
+  right: 8px;
+  left: auto;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.comment-navigation.paging-navigation .pagination.loop-pagination span,
+.navigation.paging-navigation .pagination.loop-pagination span {
+  opacity: 0.5;
 }
 
 blockquote, blockquote.wp-block-quote {
@@ -2136,6 +2262,19 @@ td {
   margin: 0;
   overflow: visible;
   padding: 0.5em;
+}
+
+.the-author-info-box {
+  margin-bottom: 40px;
+}
+
+.the-author-info-box .author-avatar {
+  float: left;
+  padding: 0 15px 8px 0;
+}
+
+.the-author-info-box .author-nickname {
+  margin: 0 0 px;
 }
 
 .widget .widget-title {

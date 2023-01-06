@@ -168,6 +168,16 @@ function limeasyblog_sanitize_select( $input, $setting ) {
 }
 
 /**
+ * Sanitize checkbox.
+ *
+ * @return bool
+ */
+function limeasyblog_sanitize_checkbox( $input ){
+
+	return isset( $input ) && $input == '1' ? true : false;
+}
+
+/**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function limeasyblog_customize_preview_js() {
