@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-class LimeasyblogsSearch 
+class LimeasyblogSearch 
 {
     /**
      * Section name
@@ -235,11 +235,9 @@ class LimeasyblogsSearch
                         ?>
                     </div>
                 </div>
-                <div id="search-ighn5kfw27k" class="blog-section col-sm-12 col-md-12">
-                    <div class="col-sm-12 section-element-inside ">
-                        <?php the_posts_navigation(); ?>
-                    </div>
-                </div>
+
+                <?php do_action( 'limeasyblog_action_search_posts_navigation' ); ?>
+
             </div>
         </div>
 
@@ -327,10 +325,16 @@ class LimeasyblogsSearch
      */
     public function doSearchPostsNavigation()
     {
+        $use_custom_post_navigation = (bool) get_theme_mod( 'limeasyblog_blog_custom_post_navigation', 0 );
+
         ?>
         <div id="index-igh7nk9fw2k" class="blog-section col-sm-12 col-md-12">
             <div class="col-sm-12 section-element-inside ">
-                <?php the_posts_navigation(); ?>
+                <?php if ($use_custom_post_navigation === true) {
+                    limeasyblog_posts_navigation();
+                } else {
+                    the_posts_navigation(); 
+                } ?>
             </div>
         </div>
         <?php
@@ -400,7 +404,7 @@ class LimeasyblogsSearch
      */
     public function customizeRegisterHelper( $wp_customize )
     {
-        // blog settings section
+        // search settings section
         $wp_customize->add_section(
             'limeasyblog_search_setings_section',
             array(
@@ -409,7 +413,7 @@ class LimeasyblogsSearch
             )
         );
 
-        // blog left sidebars number
+        // search left sidebars number
         $wp_customize->add_setting(
             'limeasyblog_search_sidebars_no_left',
             array(
@@ -419,7 +423,7 @@ class LimeasyblogsSearch
             )
         );
 
-        // blog left sidebars number control
+        // search left sidebars number control
         $wp_customize->add_control(
             'limeasyblog_search_sidebars_no_left',
             array(
@@ -436,7 +440,7 @@ class LimeasyblogsSearch
             )
         );
 
-        // blog right sidebars number
+        // search right sidebars number
         $wp_customize->add_setting(
             'limeasyblog_search_sidebars_no_right',
             array(
@@ -446,7 +450,7 @@ class LimeasyblogsSearch
             )
         );
 
-        // blog right sidebars number control
+        // search right sidebars number control
         $wp_customize->add_control(
             'limeasyblog_search_sidebars_no_right',
             array(
@@ -461,8 +465,8 @@ class LimeasyblogsSearch
                     2 => 2,
                 ),
             )
-        );    
+        );
     }
 }
 
-new LimeasyblogsSearch( $LimeasyblogBlog );
+new LimeasyblogSearch( $LimeasyblogBlog );

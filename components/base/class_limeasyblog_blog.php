@@ -322,10 +322,16 @@ class LimeasyblogBlog
      */
     public function doBlogPostsNavigation()
     {
+        $use_custom_post_navigation = (bool) get_theme_mod( 'limeasyblog_blog_custom_post_navigation', 0 );
+
         ?>
         <div id="index-igh7nk9fw2k" class="blog-section col-sm-12 col-md-12">
             <div class="col-sm-12 section-element-inside ">
-                <?php the_posts_navigation(); ?>
+                <?php if ($use_custom_post_navigation === true) {
+                    limeasyblog_posts_navigation();
+                } else {
+                    the_posts_navigation();
+                } ?>
             </div>
         </div>
         <?php
@@ -452,7 +458,28 @@ class LimeasyblogBlog
                     2 => 2,
                 ),
             )
-        );    
+        );
+
+        // blog custom post navigation settings
+        $wp_customize->add_setting(
+            'limeasyblog_blog_custom_post_navigation',
+            array(
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'limeasyblog_sanitize_checkbox',
+                'default' => '',
+            )
+        );
+
+        // blog custom post navigation control
+        $wp_customize->add_control(
+            'limeasyblog_blog_custom_post_navigation',
+            array(
+                'type' => 'checkbox',
+                'section' => 'limeasyblog_blog_setings_section',
+                'label' => __( 'Use custom posts navigation', 'limeasyblog' ),
+                'description' => __( 'Custom posts navigation', 'limeasyblog' ),
+            )
+        );
     }
 }
 
