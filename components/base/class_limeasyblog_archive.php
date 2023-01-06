@@ -325,10 +325,16 @@ class LimeasyblogArchive
      */
     public function doArchivePostsNavigation()
     {
+        $use_custom_post_navigation = (bool) get_theme_mod( 'limeasyblog_blog_custom_post_navigation', 0 );
+
         ?>
         <div id="index-igh7nk9fw2k" class="blog-section col-sm-12 col-md-12">
             <div class="col-sm-12 section-element-inside ">
-                <?php the_posts_navigation(); ?>
+                <?php if ($use_custom_post_navigation === true) {
+                    limeasyblog_posts_navigation();
+                } else {
+                    the_posts_navigation(); 
+                } ?>
             </div>
         </div>
         <?php
@@ -398,7 +404,7 @@ class LimeasyblogArchive
      */
     public function customizeRegisterHelper( $wp_customize )
     {
-        // blog settings section
+        // archive settings section
         $wp_customize->add_section(
             'limeasyblog_archive_setings_section',
             array(
@@ -407,7 +413,7 @@ class LimeasyblogArchive
             )
         );
 
-        // blog left sidebars number
+        // archive left sidebars number
         $wp_customize->add_setting(
             'limeasyblog_archive_sidebars_no_left',
             array(
@@ -417,7 +423,7 @@ class LimeasyblogArchive
             )
         );
 
-        // blog left sidebars number control
+        // archive left sidebars number control
         $wp_customize->add_control(
             'limeasyblog_archive_sidebars_no_left',
             array(
@@ -434,7 +440,7 @@ class LimeasyblogArchive
             )
         );
 
-        // blog right sidebars number
+        // archive right sidebars number
         $wp_customize->add_setting(
             'limeasyblog_archive_sidebars_no_right',
             array(
@@ -444,7 +450,7 @@ class LimeasyblogArchive
             )
         );
 
-        // blog right sidebars number control
+        // archive right sidebars number control
         $wp_customize->add_control(
             'limeasyblog_archive_sidebars_no_right',
             array(
@@ -459,7 +465,7 @@ class LimeasyblogArchive
                     2 => 2,
                 ),
             )
-        );    
+        );
     }
 }
 
