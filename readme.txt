@@ -81,3 +81,6 @@ Screenshot resources:
 
 = 1.0.10 - January 06 2023 =
 * Custom posts navigation
+
+= 1.0.11 - January 06 2023 =
+* Added option to display author box on the post page

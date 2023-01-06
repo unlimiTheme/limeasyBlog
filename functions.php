@@ -9,7 +9,7 @@
 
 if ( ! defined( 'LIMEASYBLOG_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'LIMEASYBLOG_VERSION', '1.0.10' );
+	define( 'LIMEASYBLOG_VERSION', '1.0.11' );
 }
 
 if ( ! defined( 'LIMEASYBLOG_DEFAULT_THEME_STYLE' ) ) {
