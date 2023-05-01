@@ -84,3 +84,6 @@ Screenshot resources:
 
 = 1.0.11 - January 06 2023 =
 * Added option to display author box on the post page
+
+= 1.0.12 - May 01 2023 =
+* Show arrow for items that have children in the menu
