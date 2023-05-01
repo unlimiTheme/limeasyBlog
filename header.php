@@ -113,8 +113,7 @@
                                                     array(
                                                         'theme_location'    => 'menu-1',
                                                         'menu_id'           => 'primary-menu',
-                                                        'before'            => '<div class="ancestor-wrapper">',
-                                                        'after'             => '<span class="dropdown-menu-icon"></span></div>'
+                                                        'link_after'        => '<span class="dropdown-menu-icon"></span>',
                                                     )
                                                 );
                                             ?>
